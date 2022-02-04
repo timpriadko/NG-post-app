@@ -129,13 +129,22 @@ hr {
   margin: 0.5rem 0;
 }
 
+.footer-nav-item {
+  .menu-item {
+    a {
+      color: $white !important;
+      font-size: 18px;
+    }
+  }
+}
+
 .page-wrap {
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 
   & > .container {
-    height: 100%;
+    height: auto;
   }
 }

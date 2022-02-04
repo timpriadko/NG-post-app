@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 import { Language } from '../../core/constants';
+import { MenuItem, MenuItems } from '../../core/app-model/navigation';
 
 @Component({
   selector: 'app-homepage',
@@ -9,6 +10,7 @@ import { Language } from '../../core/constants';
 })
 export class HomepageComponent {
   currentLang: string = this.translate.currentLang;
+  menuItems: MenuItem[] = MenuItems;
 
   constructor(public translate: TranslateService) {
     translate.addLangs([Language.EN, Language.FR]);
@@ -16,4 +18,8 @@ export class HomepageComponent {
 
     translate.use(this.currentLang);
   }
+
+  // trackByFn(item): any {
+  //   return item.id;
+  // }
 }
