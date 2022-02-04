@@ -63,7 +63,7 @@
           <app-go-to-posts></app-go-to-posts>
           <div class="footer-nav-list d-flex">
             <app-menu-item
-              *ngFor="let menuItem of menuItems;"
+              *ngFor="let menuItem of menuItems; trackBy: trackByFn"
               [menuItem]="menuItem"
               class="ml-2 footer-nav-item"
             ></app-menu-item>

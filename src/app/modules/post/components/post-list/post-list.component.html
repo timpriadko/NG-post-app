@@ -4,6 +4,7 @@
     (removePostEvent)="removePost($event)"
     [index]="idx"
     *ngFor="let post of posts; 
+    trackBy: trackByFn; 
     let idx = index"
     [ngClass]="{
       border: idx % 2,

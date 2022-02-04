@@ -19,7 +19,7 @@ export class HomepageComponent {
     translate.use(this.currentLang);
   }
 
-  // trackByFn(item): any {
-  //   return item.id;
-  // }
+  trackByFn(item: any): any {
+    return item.id;
+  }
 }

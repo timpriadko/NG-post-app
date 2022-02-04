@@ -13,7 +13,7 @@ export class MenuComponent {
   @Input()
   menuItems!: MenuItem[];
 
-  trackByFn(item: { id: number; }): number {
+  trackByFn(item: any): any {
     return item.id;
   }
 

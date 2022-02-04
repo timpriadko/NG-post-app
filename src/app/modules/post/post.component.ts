@@ -45,8 +45,4 @@ export class PostPageComponent implements OnInit {
       this.fetchedPosts = this.fetchedPosts.filter((post) => post.id !== id);
     });
   }
-
-  trackByFn(item: Post): number {
-    return item.id;
-  }
 }

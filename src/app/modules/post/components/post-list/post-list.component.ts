@@ -17,7 +17,7 @@ export class PostListComponent {
     this.removePostEvent.emit(id);
   }
 
-  // trackByFn(item: { id: number; }): TrackByFunction<Post> {
-  //   return item.id;
-  // }
+  trackByFn(item: any): any {
+    return item.id;
+  }
 }
