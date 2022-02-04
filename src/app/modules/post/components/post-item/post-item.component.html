@@ -1,0 +1,18 @@
+<ng-container>
+  <div class="card-body">
+    <h5 class="card-title">
+      {{ post.title }}
+    </h5>
+    <p class="card-text">
+      {{ post.body }}
+    </p>
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-danger" (click)="removePost(post.id)">
+        {{ 'Common.DELETE' | translate }}
+      </button>
+      <a [routerLink]="['/posts', post.id]" class="btn btn-primary">
+        {{ 'Common.OPEN' | translate }}
+      </a>
+    </div>
+  </div>
+</ng-container>

@@ -1,0 +1,9 @@
+<footer class="bg-dark">
+  <h3 class="text-center">{{ 'Common.FOOTER' | translate }}</h3>
+
+  <ng-container>
+    <ng-content></ng-content>
+    <ng-content select="[role=navigation]"></ng-content>
+    <ng-content select="[role=copyrights]"></ng-content>
+  </ng-container>
+</footer>

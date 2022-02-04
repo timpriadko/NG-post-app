@@ -1,0 +1,16 @@
+<div class="col-xl-12 d-flex flex-column">
+  <app-post-item
+    [post]="post"
+    (removePostEvent)="removePost($event)"
+    [index]="idx"
+    *ngFor="let post of posts; 
+    let idx = index"
+    [ngClass]="{
+      border: idx % 2,
+      'align-self-end': idx % 2,
+      'border-warning': idx % 2,
+      'border-success': idx % 3
+    }"
+    class="card col-md-8 mt-3 border border-primary"
+  ></app-post-item>
+</div>

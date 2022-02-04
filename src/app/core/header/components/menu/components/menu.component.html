@@ -1,0 +1,13 @@
+<div id="menuToggle">
+  <app-menu-burger
+    [menuActive]="menuActive"
+    (click)="burgerHandler()"
+  ></app-menu-burger>
+
+  <ul id="menu" [class.active]="menuActive">
+    <app-menu-item
+      *ngFor="let menuItem of menuItems;"
+      [menuItem]="menuItem"
+    ></app-menu-item>
+  </ul>
+</div>

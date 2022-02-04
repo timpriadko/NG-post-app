@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Post, PostService } from './modules/post/services/post.service';
+import { Post, PostService } from './services/post.service';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
-  providers: [PostService],
+  selector: 'app-post-page',
+  templateUrl: './post.component.html',
+  styleUrls: ['./post.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class PostPageComponent implements OnInit {
   currentLang: string = this.translate.currentLang;
+  currentHeadline = 'Headline';
+  headline: string = '';
   fetchedPosts: Post[] = [];
   error = '';
 
@@ -22,6 +23,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.fetchPosts();
+  }
+
+  changeHeadline(newHeadline: string): void {
+    this.currentHeadline = newHeadline;
   }
 
   fetchPosts(): void {
@@ -39,5 +44,9 @@ export class AppComponent implements OnInit {
     this.postService.removePost(id).subscribe(() => {
       this.fetchedPosts = this.fetchedPosts.filter((post) => post.id !== id);
     });
+  }
+
+  trackByFn(item: Post): number {
+    return item.id;
   }
 }

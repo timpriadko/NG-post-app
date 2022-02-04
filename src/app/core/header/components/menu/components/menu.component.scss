@@ -1,0 +1,61 @@
+// hamburger menu styles
+#menuToggle {
+  @media (max-width: 991.98px) {
+    display: block;
+    position: relative;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  @media (max-width: 991.98px) {
+    a {
+      text-decoration: none;
+      color: #232323;
+
+      transition: color 0.3s ease;
+    }
+
+    & #menuToggle a:hover {
+      color: tomato;
+    }
+  }
+}
+
+/*
+    * Make this absolute positioned
+    * at the top left of the screen
+    */
+#menu {
+  margin-bottom: 0;
+  display: flex;
+
+  @media (max-width: 991.98px) {
+    position: absolute;
+    width: 300px;
+    height: 90vh;
+    flex-direction: column;
+    text-align: end;
+    padding: 25px;
+
+    background: #ededed;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+
+    transform-origin: 0% 0%;
+    transform: translate(31%, 34px);
+
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  &.active {
+    transform: translate(-78%, 34px);
+  }
+
+  & > * {
+    & + * {
+      margin-left: 10px;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+<div class="page-wrap">
+
+  <app-header></app-header>
+  
+  <div class="container">
+    <h3>{{ 'Common.HOME_PAGE' | translate }}</h3>
+  
+    <app-go-to-posts></app-go-to-posts>
+  </div>
+  
+  <app-footer>
+    <ng-container role="navigation">
+      <div class="text-center">
+        <app-go-to-posts></app-go-to-posts>
+      </div>
+    </ng-container>
+  
+    <ng-container role="copyrights">
+      <div class="m-2">
+        {{ 'Common.COPYRIGHT' | translate }}
+      </div>
+    </ng-container>
+  </app-footer>
+  
+</div>

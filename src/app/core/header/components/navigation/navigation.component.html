@@ -1,0 +1,15 @@
+<nav class="navbar bg-dark">
+  <div class="container d-flex">
+    <h1>
+      <a [routerLink]="['/']">{{ 'Common.APP_NAME' | translate }}</a>
+    </h1>
+
+    <app-language-selector
+      [langs]="langs"
+      [currentLang]="currentLang"
+      (newLangEvent)="changeLangHandler($event)"
+    ></app-language-selector>
+
+    <app-menu [menuItems]="menuItems"></app-menu>
+  </div>
+</nav>

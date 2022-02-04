@@ -1,0 +1,22 @@
+<h1
+  class="text-center"
+  (click)="openModalHandler()"
+  placement="top"
+  ngbTooltip="{{ 'Headline.HEADLINE_TOOLTIP' | translate }}"
+>
+  {{ headline }}
+</h1>
+
+<ngb-modal
+  [modalOpened]="modalOpened"
+  (modalCloseEvent)="closeModalHandler($event)"
+  (modalCloseReasonEvent)="updateHeadlineOnModalChange($event)"
+>
+  <ng-container>
+    <input
+      type="text"
+      placeholder="{{ 'Headline.HEADLINE' | translate }}"
+      [(ngModel)]="headlineInput"
+    />
+  </ng-container>
+</ngb-modal>
