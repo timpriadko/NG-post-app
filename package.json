@@ -10,13 +10,14 @@
     "test": "ng test",
     "heroku-postbuild": "ng build --prod"
   },
-  "private": true,"dependencies": {
+  "private": true,
+  "dependencies": {
+    "@angular-devkit/build-angular": "~12.2.12",
     "@angular/animations": "12.2.14",
     "@angular/common": "12.2.14",
     "@angular/compiler": "12.2.13",
     "@angular/compiler-cli": "12.2.13",
     "@angular/core": "12.2.14",
-    "@angular-devkit/build-angular": "~12.2.12",
     "@angular/forms": "12.2.14",
     "@angular/localize": "12.2.14",
     "@angular/platform-browser": "12.2.14",
@@ -26,7 +27,9 @@
     "@ngx-translate/core": "13.0.0",
     "@ngx-translate/http-loader": "6.0.0",
     "bootstrap": "4.6.1",
+    "express": "^4.17.2",
     "jquery": "3.6.0",
+    "path": "^0.12.7",
     "popper.js": "1.16.1",
     "rxjs": "6.6.7",
     "tslib": "2.3.1",
