@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { Language } from '../../../constants';
+import { Language } from '../../../../../core/constants';
 import { MenuItem } from '../../header.component';
 
 @Component({

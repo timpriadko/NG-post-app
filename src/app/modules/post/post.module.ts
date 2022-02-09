@@ -13,18 +13,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { PostService } from './services/post.service';
 import { environment } from '../../../environments/environment';
-// import { SinglePostPageComponent } from './components/single-post-page/single-post-page.component';
 import { RouterModule } from '@angular/router';
-import { PostRoutingModule } from './post-routing.module';
 import { PostItemComponent } from './components/post-item/post-item.component';
-// import { PostPageComponent } from './post.component';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [
-    // PostPageComponent,
     PostListComponent,
     PostItemComponent,
-    // SinglePostPageComponent,
   ],
   imports: [
     CommonModule,
@@ -44,7 +40,7 @@ import { PostItemComponent } from './components/post-item/post-item.component';
       useDefaultLang: true,
       defaultLanguage: environment.defaultLocale,
     }),
-    // PostRoutingModule,
+    SharedModule
   ],
   exports: [PostListComponent],
   providers: [PostService],

@@ -12,6 +12,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule } from '@angular/forms';
 import { GoToPostsComponent } from './components/go-to-posts/go-to-posts.component';
 import { environment } from '../../../environments/environment';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [GoToPostsComponent],
@@ -32,6 +33,7 @@ import { environment } from '../../../environments/environment';
       useDefaultLang: true,
       defaultLanguage: environment.defaultLocale,
     }),
+    SharedModule
   ],
   exports: [GoToPostsComponent],
   providers: [],

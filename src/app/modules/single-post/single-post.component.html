@@ -1,0 +1,53 @@
+<div class="page-wrap">
+
+    <div>
+    
+      <app-header></app-header>
+    
+      <div class="container">
+      
+        <ng-container *ngIf="(post$ | async) as post">
+          <div class="card-body">
+            <h5 class="card-title">
+              {{ post?.title }}
+            </h5>
+            <p class="card-text">
+              {{ post?.body }}
+            </p>
+          </div>
+        </ng-container>
+      </div>
+      
+    </div>
+    
+  <app-footer>
+    <div class="container">
+      <ng-container role="navigation">
+        <div
+          class="
+            footer-nav-wrap
+            d-flex
+            align-items-center
+            justify-content-center
+          "
+        >
+          <div class="footer-nav-list d-flex">
+            <app-menu-item
+              *ngFor="let menuItem of menuItems; trackBy: trackByFn"
+              [menuItem]="menuItem"
+              class="ml-2 footer-nav-item"
+            ></app-menu-item>
+          </div>
+        </div>
+      </ng-container>
+  
+      <ng-container role="copyrights">
+        <div class="m-2 text-center">
+          {{ 'Common.COPYRIGHT' | translate }}
+        </div>
+      </ng-container>
+    </div>
+  </app-footer>
+    
+</div>
+  
